@@ -1,0 +1,61 @@
+apiVersion: entando.org/v1
+entandoStatus:{}
+kind: EntandoPlugin
+metadata:
+  name: empty-entando-pda
+spec:
+  companionContainers: []
+  connectionConfigNames: []
+  dbms: mysql
+  healthCheckPath: /actuator/health
+  image: 'docker.io/entando/entando-process-driven-plugin:latest'
+  ingressPath: /pda
+  parameters: {}
+  permissions: []
+  replicas: 1
+  roles:
+    - code: task-list
+      name: task-list
+    - code: task-get
+      name: task-get
+    - code: task-definition-columns-list
+      name: task-definition-columns-list
+    - code: task-comments-list
+      name: task-comments-list
+    - code: task-comments-get
+      name: task-comments-get
+    - code: task-comments-create
+      name: task-comments-create
+    - code: task-comments-delete
+      name: task-comments-delete
+    - code: task-form-get
+      name: task-form-get
+    - code: task-form-submit
+      name: task-form-submit
+    - code: connection-list
+      name: connection-list
+    - code: connection-get
+      name: connection-get
+    - code: connection-create
+      name: connection-create
+    - code: connection-edit
+      name: connection-edit
+    - code: connection-delete
+      name: connection-delete
+    - code: process-definition-list
+      name: process-definition-list
+    - code: process-diagram
+      name: process-diagram
+    - code: process-definition-form-get
+      name: process-definition-form-get
+    - code: process-definition-form-submit
+      name: process-definition-form-submit
+    - code: group-list
+      name: group-list
+    - code: summary-data-repository-list
+      name: summary-data-repository-list
+    - code: summary-type-list
+      name: summary-type-list
+    - code: summary-get
+      name: summary-get
+  securityLevel: lenient

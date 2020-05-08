@@ -1,0 +1,6 @@
+code: empty-pda-plugin-bundle
+
+components:
+
+  plugins:
+    - plugins/plugin.yaml
